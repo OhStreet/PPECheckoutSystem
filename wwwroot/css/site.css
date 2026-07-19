@@ -20,3 +20,71 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+:root {
+    --app-bg: #f4f6f8;
+    --app-dark: #1f2937;
+    --app-dark-alt: #111827;
+    --app-card: #ffffff;
+    --app-border: #d1d5db;
+    --app-accent: #2563eb;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--app-bg);
+    color: #111827;
+}
+
+.app-navbar {
+    background: var(--app-dark-alt);
+}
+
+.app-main {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.app-footer {
+    border-top: 1px solid var(--app-border);
+    padding: 1rem 0;
+    color: #6b7280;
+    background: #ffffff;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.content-card {
+    background: var(--app-card);
+    border: 1px solid var(--app-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.table-card {
+    background: var(--app-card);
+    border: 1px solid var(--app-border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
