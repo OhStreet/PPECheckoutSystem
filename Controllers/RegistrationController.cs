@@ -19,15 +19,18 @@ namespace PPECheckoutSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(User user)
+        public async Task<IActionResult> Register(Employee employee)
         {
             if (ModelState.IsValid)
             {
-                _context.Users.Add(user);
+                employee.IsActive = true;
+                employee.Role = "Employee";
+
+                _context.Employees.Add(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Home");
             }
-            return View(user);
+            return View(employee);
         }
     }
 }
